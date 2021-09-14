@@ -13,14 +13,16 @@ public class IBSNDigits {
         String strOfNumber;
         
         do {
+            System.out.println("Please enter a number:");
             number = 1;
             try{
                 number = Long.parseLong(scn.nextLine());
-            }catch(Exception ex){
-                
+            }catch(NumberFormatException ex){
+                System.out.println("Please enter number using digits. Example: 8721372832"); 
             }
             strOfNumber = String.valueOf(number);
         } while (strOfNumber.length() != 10);
+
 
         charsOfNum = strOfNumber.toCharArray();
         i = 0;
