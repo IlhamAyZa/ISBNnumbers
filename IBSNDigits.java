@@ -25,10 +25,18 @@ public class IBSNDigits {
             num = Character.getNumericValue(digit);
 
             sum += (10 - i) * num;
-            //System.out.print(sum + ", ");
+            System.out.print(sum + ", ");
             i++;
         }
-        //System.out.println("");
+        System.out.println("");
         System.out.println("Sum: " + sum);
+        
+        
+        if (sum % 11 == 0){
+            System.out.println("This is IBSN number");                    
+        }
+        else{
+            System.out.println("This is not IBSN number");
+        }
     }
 }
