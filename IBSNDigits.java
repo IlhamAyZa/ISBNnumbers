@@ -13,8 +13,12 @@ public class IBSNDigits {
         String strOfNumber;
         
         do {
-            number = Long.parseLong(scn.nextLine());
-            ;
+            number = 1;
+            try{
+                number = Long.parseLong(scn.nextLine());
+            }catch(Exception ex){
+                
+            }
             strOfNumber = String.valueOf(number);
         } while (strOfNumber.length() != 10);
 
@@ -23,7 +27,6 @@ public class IBSNDigits {
         //System.out.println(charsOfNum);
         for (char digit : charsOfNum) {
             num = Character.getNumericValue(digit);
-
             sum += (10 - i) * num;
             System.out.print(sum + ", ");
             i++;
